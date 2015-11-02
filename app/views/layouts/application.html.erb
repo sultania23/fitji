@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fitji</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" ><h1>FITZRA</h1></a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav center">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "About", page_about_path %></li>
+          <li><%= link_to "Faqs", page_faqs_path %></li>
+          <li><%= link_to "Contact", page_contacts_path %></li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><% if user_signed_in? %>
+            <%= link_to "Sign Out",destroy_user_session_path, method: :delete %></li>
+            <% else %>
+            <li><%= link_to "Sign In", new_user_session_path, class: "btn btn-info btn -small" %></li>
+            <li><%= link_to "Sign Up" ,new_user_registration_path, class: "btn btn-info btn -small" %></li>
+            <% end %>
+
+</div>
+</div>
+</nav>
+</div>
+<div class="container -fluid">
+<p class="notice"><%= notice %></p>
+ <p class="alert"><%= alert %></p>
+</div>
+<div class="background_image">
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+
+  <div class="container-fluid">
+    <h1>about us</h1>
+    <div class="row">
+      <div class="col-sm-6" style="background-color:skyblue;">
+        <p><h4>Who We Are</h4></p>
+        <%= link_to "Contact", page_contacts_path %>
+      </div>
+      <div class="col-sm-6" style="background-color:green;">
+        <p><h4> Our Partners</h4></p>
+        hgfdfghjk
+      </div>
+    </div>
+  </div>
+    <h3>copyright @SBSDEVELOPRS</h3>
+  </div>
+</nav>
+  <%= yield %>
+
+
+</body>
+</html>

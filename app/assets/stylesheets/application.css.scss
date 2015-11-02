@@ -1,0 +1,25 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+.jumbotron {
+    background-color: #0088cc; /* Orange */
+    color: #ffffff;
+}
+
+.background_image {
+    background: url('logo.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: .95;
+    background-attachment:scroll;
+    z-index: -999;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
